@@ -1,0 +1,47 @@
+// 1. VARIABILI: Qui scegli i tuoi colori!
+// Ho messo un blu elettrico, ma puoi cambiare il codice HEX con il tuo colore preferito
+$primary-color: #0d6efd; 
+$text-dark: #212529;
+$font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+// 2. STILI GLOBALI
+body {
+  font-family: $font-main;
+  color: $text-dark;
+}
+
+// 3. NESTING: Gestiamo la Navbar in modo ordinato
+.navbar {
+  // Animazione sul nome/logo
+  .navbar-brand {
+    color: $primary-color !important;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05); // Si ingrandisce leggermente quando ci passi sopra
+    }
+  }
+  
+  // Stile per i link del menu
+  .nav-link {
+    font-weight: 500;
+    
+    // Quando sei sulla pagina attiva, il link prende il tuo colore e una linea sotto
+    &.active {
+      color: $primary-color !important;
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+}
+
+// 4. BOTTONI PERSONALIZZATI con Mixin/Funzioni di Sass (darken)
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover {
+    // Sass calcola automaticamente un colore più scuro del 10% per l'effetto hover!
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
