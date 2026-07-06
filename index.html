@@ -3,227 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincenzo Selvaggi - Portfolio</title>
+    <title>Vincenzo Selvaggi - Developer Portfolio</title>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <!-- Google Fonts moderni e tecnologici -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* COLORI E STILI BASE (Stile Sofia) */
         :root {
-            --bg-crema: #fdf6e9;
-            --bg-celeste: #b5dce1;
-            --testo-scuro: #2c6e7a;
-            --bianco: #ffffff;
+            --bg-main: #0B0E14;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --primary: #00F0FF;
+            --secondary: #FF003C;
+            --text-light: #E2E8F0;
+            --text-muted: #94A3B8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-crema);
-            color: var(--testo-scuro);
-            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, .logo {
-            font-family: 'Pacifico', cursive;
-            color: var(--testo-scuro);
+        /* Testo gradiente animato */
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        .titolo-sezione {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            text-shadow: 3px 3px 0px rgba(44, 110, 122, 0.2);
-            transform: rotate(-5deg);
-            display: inline-block;
-        }
-
-        /* NAVBAR */
+        /* NAVBAR EFFETTO VETRO */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
-            background-color: var(--bg-celeste);
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
-            font-size: 2rem;
-            margin: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 1.5rem;
-            margin: 0;
-            padding: 0;
+            gap: 2.5rem;
         }
 
-        .nav-links li a {
+        .nav-links a {
+            color: var(--text-light);
             text-decoration: none;
-            color: var(--bianco);
-            background-color: var(--testo-scuro);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.3s;
+            font-weight: 400;
+            transition: color 0.3s ease;
         }
 
-        .nav-links li a:hover {
-            opacity: 0.8;
+        .nav-links a:hover {
+            color: var(--primary);
         }
 
         /* HERO SECTION */
         .hero {
+            min-height: 80vh;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: space-around;
-            padding: 5rem 10%;
-            background-color: var(--bg-crema);
+            text-align: center;
+            padding: 0 5%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.08) 0%, rgba(11, 14, 20, 1) 60%);
         }
 
-        .hero-testo h1 {
-            font-size: 4.5rem;
-            line-height: 1.2;
-            text-shadow: 4px 4px 0px rgba(44, 110, 122, 0.2);
-            transform: rotate(-5deg);
+        .hero h1 {
+            font-size: 5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
         }
 
-        .hero-img {
-            width: 300px;
-            height: 300px;
-            background-color: var(--testo-scuro);
-            border-radius: 50%;
-            object-fit: cover;
-            border: 10px solid var(--bg-celeste);
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
         }
 
-        /* SEZIONI ALTERNATE */
-        .sezione {
-            padding: 5rem 10%;
+        .btn {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
         }
 
-        .bg-celeste { background-color: var(--bg-celeste); }
-        .bg-crema { background-color: var(--bg-crema); }
+        .btn:hover {
+            background: var(--primary);
+            color: var(--bg-main);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+        }
 
-        .grid-3-col {
+        /* SEZIONI E CARDS */
+        .section {
+            padding: 6rem 5%;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 3.5rem;
+            text-align: center;
+        }
+
+        .grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
 
-        .grid-2-col {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-            margin-top: 3rem;
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-        .card { padding: 1rem; }
-        .card h3 { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; margin-bottom: 1rem; }
-        .card p { font-size: 0.9rem; line-height: 1.6; }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 3rem;
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
         }
 
-        .gallery-item {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted);
         }
 
         @media (max-width: 768px) {
-            .hero, .grid-3-col, .grid-2-col { flex-direction: column; grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <nav>
-        <h1 class="logo">Vincenzo Selvaggi</h1>
+        <div class="logo">VINCENZO<span class="gradient-text">.DEV</span></div>
         <ul class="nav-links">
-            <li><a href="#su-di-me">Su di me</a></li>
-            <li><a href="#formazione">Formazione</a></li>
-            <li><a href="#esperienze">Esperienze</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">Competenze</a></li>
+            <li><a href="#projects">Progetti</a></li>
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="hero">
-        <div class="hero-testo">
-            <h1>Benvenuto<br>nel mio<br>Portfolio</h1>
-        </div>
-        <!-- Inserisci qui la tua foto -->
-        <img src="assets/foto-vincenzo.png" alt="Vincenzo Selvaggi" class="hero-img">
+        <h1 class="gradient-text">Costruisco il futuro del Web.</h1>
+        <p>Sono Vincenzo Selvaggi, un Frontend Developer appassionato di design moderni, interfacce fluide e codice pulito.</p>
+        <a href="#projects" class="btn">Vedi i miei lavori</a>
     </header>
 
-    <!-- SU DI ME -->
-    <section id="su-di-me" class="sezione bg-celeste">
-        <h2 class="titolo-sezione">Su di me</h2>
-        <div class="grid-3-col">
+    <section id="about" class="section">
+        <h2 class="section-title">Le mie Competenze</h2>
+        <div class="grid">
             <div class="card">
-                <h3>ENERGIA</h3>
-                <p>Porto sempre un'attitudine positiva ed energica in tutto ciò che faccio, affrontando le sfide con entusiasmo.</p>
+                <h3>Design & UI/UX</h3>
+                <p>Creo interfacce utente accattivanti e intuitive. Mi concentro sull'usabilità e sui dettagli visivi che fanno la differenza.</p>
             </div>
             <div class="card">
-                <h3>CURIOSITÀ</h3>
-                <p>Mi piace scoprire sempre cose nuove, sperimentare e trovare soluzioni creative ai problemi legati al codice.</p>
+                <h3>Frontend Development</h3>
+                <p>Sviluppo layout responsivi utilizzando HTML5, CSS3, e framework moderni. Uso Sass per mantenere il codice organizzato e modulare.</p>
             </div>
             <div class="card">
-                <h3>EQUILIBRIO</h3>
-                <p>La mia forza sta nel trovare la giusta via di mezzo tra logica di programmazione e creatività visiva.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMAZIONE -->
-    <section id="formazione" class="sezione bg-crema">
-        <h2 class="titolo-sezione">Formazione</h2>
-        <div class="grid-2-col">
-            <div class="card">
-                <h3>Sviluppo Web & Design</h3>
-                <p>HTML & CSS<br>JAVASCRIPT<br>SASS / SCSS<br>GIT & GITHUB</p>
-            </div>
-            <div class="card">
-                <h3>Percorso di Studi</h3>
-                <p><strong>Corso HTML & CSS</strong><br>Start2Impact University</p>
+                <h3>Version Control</h3>
+                <p>Gestione ottimale del codice tramite Git e GitHub, dal versioning fino al deploy continuo del sito in produzione.</p>
             </div>
         </div>
     </section>
 
-    <!-- ESPERIENZE -->
-    <section id="esperienze" class="sezione bg-celeste">
-        <h2 class="titolo-sezione">Esperienze</h2>
-        <div class="card">
-            <h3>Web Development</h3>
-            <p><strong>Sviluppatore Frontend</strong> | Progetti Personali</p>
-            <p>Sviluppo di interfacce web responsive, gestione del codice tramite versioning e implementazione di fogli di stile avanzati.</p>
+    <section id="projects" class="section" style="background: rgba(0, 240, 255, 0.02);">
+        <h2 class="section-title">Esperienze e Progetti</h2>
+        <div class="grid">
+            <div class="card" style="border-color: var(--secondary);">
+                <h3 style="color: var(--secondary);">Corso HTML & CSS</h3>
+                <p style="color: #fff; margin-bottom: 0.5rem;"><strong>Start2Impact University</strong></p>
+                <p>Percorso formativo completo sullo sviluppo web frontend. Comprensione approfondita delle logiche strutturali e stilistiche del web.</p>
+            </div>
+            <div class="card">
+                <h3>Portfolio Personale 2.0</h3>
+                <p style="color: #fff; margin-bottom: 0.5rem;"><strong>Progetto Indipendente</strong></p>
+                <p>Progettazione e sviluppo di questo sito web in stile glassmorphism, realizzato da zero senza l'ausilio di framework esterni.</p>
+            </div>
         </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="sezione bg-crema">
-        <h2 class="titolo-sezione">Gallery</h2>
-        <div class="gallery-grid">
-            <!-- Sostituisci questi percorsi con i veri nomi delle tue immagini -->
-            <img src="assets/cert-1.jpg" alt="Certificato HTML" class="gallery-item">
-            <img src="assets/cert-2.jpg" alt="Progetto Web" class="gallery-item">
-        </div>
-    </section>
+    <footer class="footer">
+        <p>© 2026 Vincenzo Selvaggi. Tutti i diritti riservati.</p>
+        <p style="margin-top: 1.5rem;">
+            <a href="mailto:tuamail@esempio.com" class="gradient-text" style="text-decoration: none; font-weight: bold; font-size: 1.2rem;">Scrivimi un'email</a>
+        </p>
+    </footer>
 
 </body>
 </html>
