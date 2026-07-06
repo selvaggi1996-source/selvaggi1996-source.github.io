@@ -1,120 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/scss/style.css">
+    <title>Vincenzo Selvaggi - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* COLORI E STILI BASE (Stile Sofia) */
+        :root {
+            --bg-crema: #fdf6e9;
+            --bg-celeste: #b5dce1;
+            --testo-scuro: #2c6e7a;
+            --bianco: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-crema);
+            color: var(--testo-scuro);
+            text-align: center;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Pacifico', cursive;
+            color: var(--testo-scuro);
+        }
+
+        .titolo-sezione {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            text-shadow: 3px 3px 0px rgba(44, 110, 122, 0.2);
+            transform: rotate(-5deg);
+            display: inline-block;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: var(--bg-celeste);
+        }
+
+        .logo {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: var(--bianco);
+            background-color: var(--testo-scuro);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links li a:hover {
+            opacity: 0.8;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 5rem 10%;
+            background-color: var(--bg-crema);
+        }
+
+        .hero-testo h1 {
+            font-size: 4.5rem;
+            line-height: 1.2;
+            text-shadow: 4px 4px 0px rgba(44, 110, 122, 0.2);
+            transform: rotate(-5deg);
+        }
+
+        .hero-img {
+            width: 300px;
+            height: 300px;
+            background-color: var(--testo-scuro);
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid var(--bg-celeste);
+        }
+
+        /* SEZIONI ALTERNATE */
+        .sezione {
+            padding: 5rem 10%;
+        }
+
+        .bg-celeste { background-color: var(--bg-celeste); }
+        .bg-crema { background-color: var(--bg-crema); }
+
+        .grid-3-col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .grid-2-col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .card { padding: 1rem; }
+        .card h3 { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; margin-bottom: 1rem; }
+        .card p { font-size: 0.9rem; line-height: 1.6; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero, .grid-3-col, .grid-2-col { flex-direction: column; grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
-  <div class="container">
-    <!-- Il tuo Logo o Nome -->
-    <a class="navbar-brand fw-bold" href="index.html">Il Mio Portfolio</a>
 
-    <!-- Pulsante per la visualizzazione Mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- NAVBAR -->
+    <nav>
+        <h1 class="logo">Vincenzo Selvaggi</h1>
+        <ul class="nav-links">
+            <li><a href="#su-di-me">Su di me</a></li>
+            <li><a href="#formazione">Formazione</a></li>
+            <li><a href="#esperienze">Esperienze</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
 
-    <!-- Link del Menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cv.html">CV</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contatti.html">Contattami</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Sezione Hero -->
-<header class="container mt-5 pt-5">
-  <div class="row align-items-center">
-    
-    <!-- Testo / Bio -->
-    <div class="col-lg-6">
-      <h1 class="display-4 fw-bold">Ciao, sono [Il Tuo Nome]</h1>
-      <h2 class="text-primary">UX/UI Designer & Web Developer</h2>
-      <p class="lead mt-3">
-        Benvenuto nel mio portfolio. Sono specializzato nel creare esperienze digitali intuitive e design accattivanti. Trasformo le idee in interfacce semplici, eleganti e funzionali.
-      </p>
-      
-      <!-- Pulsanti Social / GitHub (Requisito della traccia) -->
-      <div class="mt-4">
-        <!-- Ricorda di aggiornare l'href con il tuo vero link GitHub -->
-        <a href="https://github.com/selvaggi1996-source" target="_blank" class="btn btn-dark btn-lg me-2">Il mio GitHub</a>
-        <a href="cv.html" class="btn btn-outline-primary btn-lg">Vai al CV</a>
-      </div>
-    </div>
-    
-    <!-- Immagine -->
-    <div class="col-lg-6 text-center mt-5 mt-lg-0">
-      <!-- Per ora c'è un'immagine segnaposto. Più avanti metterai la tua foto vera! -->
-      <img src="https://via.placeholder.com/400" alt="La mia foto profilo" class="img-fluid rounded-circle shadow-lg" style="max-width: 400px;">
-    </div>
-    
-  </div>
-</header>
-<!-- Sezione Competenze -->
-<section class="container mt-5 pt-5 pb-5">
-  <h2 class="text-center mb-5 fw-bold">Le Mie Competenze</h2>
-  <div class="row g-4">
-    
-    <!-- Skill 1: HTML -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm border-0 bg-light">
-        <div class="card-body text-center p-4">
-          <h3 class="card-title text-primary fw-bold">HTML5</h3>
-          <p class="card-text mt-3">Sviluppo di strutture web semantiche, accessibili e perfettamente ottimizzate per i motori di ricerca.</p>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-testo">
+            <h1>Benvenuto<br>nel mio<br>Portfolio</h1>
         </div>
-      </div>
-    </div>
-    
-    <!-- Skill 2: CSS / Sass -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm border-0 bg-light">
-        <div class="card-body text-center p-4">
-          <h3 class="card-title text-primary fw-bold">CSS & Sass</h3>
-          <p class="card-text mt-3">Design responsivo al 100%, layout complessi con CSS Grid e Flexbox, e stili modulari tramite preprocessori.</p>
+        <!-- Inserisci qui la tua foto -->
+        <img src="assets/foto-vincenzo.png" alt="Vincenzo Selvaggi" class="hero-img">
+    </header>
+
+    <!-- SU DI ME -->
+    <section id="su-di-me" class="sezione bg-celeste">
+        <h2 class="titolo-sezione">Su di me</h2>
+        <div class="grid-3-col">
+            <div class="card">
+                <h3>ENERGIA</h3>
+                <p>Porto sempre un'attitudine positiva ed energica in tutto ciò che faccio, affrontando le sfide con entusiasmo.</p>
+            </div>
+            <div class="card">
+                <h3>CURIOSITÀ</h3>
+                <p>Mi piace scoprire sempre cose nuove, sperimentare e trovare soluzioni creative ai problemi legati al codice.</p>
+            </div>
+            <div class="card">
+                <h3>EQUILIBRIO</h3>
+                <p>La mia forza sta nel trovare la giusta via di mezzo tra logica di programmazione e creatività visiva.</p>
+            </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- Skill 3: UX/UI Design -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm border-0 bg-light">
-        <div class="card-body text-center p-4">
-          <h3 class="card-title text-primary fw-bold">UX/UI Design</h3>
-          <p class="card-text mt-3">Progettazione di interfacce utente intuitive e accattivanti, sempre focalizzate sulla migliore esperienza utente.</p>
+    </section>
+
+    <!-- FORMAZIONE -->
+    <section id="formazione" class="sezione bg-crema">
+        <h2 class="titolo-sezione">Formazione</h2>
+        <div class="grid-2-col">
+            <div class="card">
+                <h3>Sviluppo Web & Design</h3>
+                <p>HTML & CSS<br>JAVASCRIPT<br>SASS / SCSS<br>GIT & GITHUB</p>
+            </div>
+            <div class="card">
+                <h3>Percorso di Studi</h3>
+                <p><strong>Corso HTML & CSS</strong><br>Start2Impact University</p>
+            </div>
         </div>
-      </div>
-    </div>
-    
-  </div>
-</section>
-<!-- Footer -->
-<footer class="bg-dark text-white py-4 mt-5">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-12 mb-3">
-        <!-- Inserisci qui i link reali ai tuoi profili -->
-        <a href="https://github.com/selvaggi1996-source" target="_blank" class="text-white text-decoration-none me-3">GitHub</a>
-        <a href="#" target="_blank" class="text-white text-decoration-none me-3">LinkedIn</a>
-        <a href="#" target="_blank" class="text-white text-decoration-none">Dribbble</a>
-      </div>
-      <div class="col-12">
-        <p class="mb-0 small">&copy; 2026 Il Mio Portfolio UX/UI. Tutti i diritti riservati.</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </section>
+
+    <!-- ESPERIENZE -->
+    <section id="esperienze" class="sezione bg-celeste">
+        <h2 class="titolo-sezione">Esperienze</h2>
+        <div class="card">
+            <h3>Web Development</h3>
+            <p><strong>Sviluppatore Frontend</strong> | Progetti Personali</p>
+            <p>Sviluppo di interfacce web responsive, gestione del codice tramite versioning e implementazione di fogli di stile avanzati.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="sezione bg-crema">
+        <h2 class="titolo-sezione">Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Sostituisci questi percorsi con i veri nomi delle tue immagini -->
+            <img src="assets/cert-1.jpg" alt="Certificato HTML" class="gallery-item">
+            <img src="assets/cert-2.jpg" alt="Progetto Web" class="gallery-item">
+        </div>
+    </section>
+
 </body>
 </html>
