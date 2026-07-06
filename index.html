@@ -7,18 +7,15 @@
     
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
     
-    <!-- Favicon Personalizzata -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon.png">
 
-    <!-- Open Graph Tags -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Vincenzo Selvaggi - Portfolio">
     <meta property="og:description" content="Visual & UI/UX Designer Freelance Portfolio.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://selvaggi1996-source.github.io">
 
     <style>
         :root {
@@ -31,16 +28,8 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
         html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-light);
-            overflow-x: hidden;
-        }
-
+        body { font-family: 'Outfit', sans-serif; background-color: var(--bg-main); color: var(--text-light); overflow-x: hidden; }
         a { text-decoration: none; }
 
         .gradient-text {
@@ -51,143 +40,29 @@
         }
 
         .navbar-custom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            background: rgba(11, 14, 20, 0.8);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 5%; border-bottom: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px); position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(11, 14, 20, 0.8);
         }
 
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--text-light);
-            transition: opacity 0.3s ease;
-        }
-        
-        .logo:hover { opacity: 0.8; color: var(--text-light); }
-
-        .nav-links-custom {
-            list-style: none;
-            display: flex;
-            gap: 2.5rem;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links-custom a {
-            color: var(--text-light);
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-
+        .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--text-light); }
+        .nav-links-custom { list-style: none; display: flex; gap: 2rem; margin: 0; }
+        .nav-links-custom a { color: var(--text-light); transition: color 0.3s; }
         .nav-links-custom a:hover { color: var(--primary); }
 
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 120px 5% 0;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.08) 0%, rgba(11, 14, 20, 1) 60%);
-        }
+        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 5% 0; background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.08) 0%, rgba(11, 14, 20, 1) 60%); }
+        .hero h1 { font-size: 4.5rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin-bottom: 1.5rem; }
+        .btn-custom { padding: 1rem 2.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); border-radius: 30px; font-weight: 600; text-transform: uppercase; transition: all 0.3s; display: inline-block; }
+        .btn-custom:hover { background: var(--primary); color: var(--bg-main); box-shadow: 0 0 30px rgba(0, 240, 255, 0.5); }
 
-        .hero h1 {
-            font-size: 5rem;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 2.5rem;
-        }
-
-        .btn-custom {
-            padding: 1rem 2.5rem;
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            border-radius: 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
-            display: inline-block;
-        }
-
-        .btn-custom:hover {
-            background: var(--primary);
-            color: var(--bg-main);
-            box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
-        }
-
-        .section { padding: 8rem 5% 4rem; }
-
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 3.5rem;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .grid-custom {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card-custom {
-            background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 2.5rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            height: 100%;
-        }
-
+        .section { padding: 6rem 5%; }
+        .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 3rem; margin-bottom: 3.5rem; text-align: center; font-weight: 700; }
+        .grid-custom { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card-custom { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 20px; transition: transform 0.3s; height: 100%; }
         .card-custom:hover { transform: translateY(-10px); border-color: var(--primary); }
-
-        .card-custom h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .card-custom p { color: var(--text-muted); line-height: 1.6; margin: 0; }
-
-        .project-img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 1rem 0;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .footer { text-align: center; padding: 3rem; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-muted); }
-
-        @media (max-width: 768px) { .hero h1 { font-size: 3rem; } .nav-links-custom { display: none; } }
+        .card-custom h3 { font-family: 'Space Grotesk', sans-serif; color: var(--primary); font-weight: 700; margin-bottom: 1rem; }
+        .project-img { width: 100%; border-radius: 10px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.1); }
+        .footer { text-align: center; padding: 3rem; border-top: 1px solid rgba(255,255,255,0.05); }
     </style>
 </head>
 <body id="home">
@@ -196,76 +71,63 @@
         <a href="#home" class="logo">Vincenzo <span class="gradient-text">Selvaggi</span></a>
         <ul class="nav-links-custom">
             <li><a href="#about">Su di me</a></li>
-            <li><a href="#experience">Esperienze e Formazione</a></li>
+            <li><a href="#experience">Esperienze</a></li>
+            <li><a href="#certificati">Certificati</a></li>
             <li><a href="contatti.html">Contatti</a></li>
         </ul>
     </nav>
 
     <header class="hero">
         <h1 class="gradient-text">Progetto esperienze digitali sorprendenti.</h1>
-        <p>Sono Vincenzo Selvaggi, Visual & UI/UX Designer freelance. Trasformo idee complesse in interfacce moderne, chiare e d'impatto.</p>
+        <p class="text-muted fs-5">Sono Vincenzo Selvaggi, Visual & UI/UX Designer freelance. Trasformo idee complesse in interfacce moderne.</p>
         <a href="#experience" class="btn-custom">Scopri di più</a>
     </header>
 
     <section id="about" class="section" style="background: rgba(0, 240, 255, 0.02);">
         <h2 class="section-title">Su di me</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 1.1rem;">
             <p>Partendo da solide basi in Amministrazione, Finanza e Marketing, ho scelto di seguire la mia vera vocazione: la progettazione grafica e visiva. Attualmente sto affinando le mie competenze con un Master in UX/UI Design presso Start2Impact.</p>
-            <br>
-            <p>Appassionato di Intelligenza Artificiale e grafica digitale, sono spinto da una continua voglia di imparare e da uno spiccato spirito imprenditoriale. Lavoro sempre per obiettivi per creare prodotti funzionali ed esteticamente impeccabili.</p>
         </div>
     </section>
 
-    <section class="section">
-        <h2 class="section-title">Le mie Competenze</h2>
-        <div class="grid-custom">
-            <div class="card-custom">
-                <h3>UI/UX Design</h3>
-                <p>Ricerca utente, wireframing e prototipazione. Mi concentro sull'usabilità per creare esperienze fluide e incentrate sull'utente finale.</p>
-            </div>
-            <div class="card-custom">
-                <h3>Visual Graphics & AI</h3>
-                <p>Integrazione di strumenti di Intelligenza Artificiale e tecniche di grafica avanzata per realizzare visual identity all'avanguardia.</p>
-            </div>
-            <div class="card-custom">
-                <h3>Sviluppo Frontend</h3>
-                <p>Ottima padronanza delle basi strutturali del web (HTML, CSS) per assicurare che il design si traduca perfettamente nel prodotto finale.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section" style="background: rgba(0, 240, 255, 0.02);">
+    <section id="experience" class="section">
         <h2 class="section-title">Esperienze & Formazione</h2>
         <div class="grid-custom">
             <div class="card-custom" style="border-color: var(--secondary);">
-                <h3 style="color: var(--secondary);">Master UX/UI Design</h3>
-                <p style="color: #fff; margin-bottom: 0.5rem;"><strong>Start2Impact University</strong></p>
-                <p>Percorso formativo avanzato focalizzato sulla progettazione di interfacce e sull'esperienza utente, unendo creatività e analisi dei dati.</p>
+                <h3>Master UX/UI Design</h3>
+                <p><strong>Start2Impact University</strong></p>
+                <p>Percorso formativo avanzato sulla progettazione di interfacce e esperienza utente.</p>
             </div>
-            
             <div class="card-custom">
                 <h3>Visual Designer Freelance</h3>
-                <p style="color: #fff; margin-bottom: 0.5rem;"><strong>Libera Professione</strong></p>
-                <img src="nome-immagine.jpg" alt="Anteprima del mio progetto web" class="project-img">
-                <p>Realizzazione di progetti grafici ed esperienze digitali per clienti, con un forte focus sull'innovazione e sul raggiungimento degli obiettivi strategici.</p>
+                <img src="nome-immagine.jpg" alt="Progetto" class="project-img">
+                <p>Progettazione di interfacce digitali innovative con un focus strategico sugli obiettivi del cliente.</p>
             </div>
-            
             <div class="card-custom">
                 <h3>Amministrazione & Marketing</h3>
-                <p style="color: #fff; margin-bottom: 0.5rem;"><strong>Diploma Superiore</strong></p>
-                <p>Una solida base formativa che mi permette di comprendere perfettamente le logiche aziendali e di approcciare i progetti di design.</p>
+                <p>Diploma superiore che unisce competenze gestionali a una mentalità orientata al mercato.</p>
             </div>
         </div>
-        <div class="text-center" style="margin-top: 3rem;">
-            <p style="color: var(--text-muted); margin-bottom: 1rem;">Esplora il codice sorgente dei miei progetti direttamente sul mio profilo:</p>
-            <a href="https://github.com/selvaggi1996-source" target="_blank" class="btn-custom" style="font-size: 0.9rem; padding: 0.8rem 1.5rem;">Visita il mio GitHub</a>
+    </section>
+
+    <section id="certificati" class="section" style="background: rgba(0, 240, 255, 0.02);">
+        <h2 class="section-title">Le mie Certificazioni</h2>
+        <div class="grid-custom" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <div class="card-custom"><img src="Desgn_e_Sviluppo_Certificato.png" class="project-img"><h3>Design e Sviluppo</h3></div>
+            <div class="card-custom"><img src="Grafica_Certificato.png" class="project-img"><h3>Grafica</h3></div>
+            <div class="card-custom"><img src="User_Interface_Certificato.png" class="project-img"><h3>User Interface</h3></div>
+            <div class="card-custom"><img src="Copywriting_Certificato.png" class="project-img"><h3>Copywriting</h3></div>
+            <div class="card-custom"><img src="Accessibilità_Certificato.png" class="project-img"><h3>Accessibilità</h3></div>
+            <div class="card-custom"><img src="Discovery_Certificato.png" class="project-img"><h3>Discovery</h3></div>
+            <div class="card-custom"><img src="Wireframing_Certificato.png" class="project-img"><h3>Wireframing</h3></div>
+            <div class="card-custom"><img src="AI_e_Prompt_Eng_Certificato.png" class="project-img"><h3>AI & Prompt Eng.</h3></div>
         </div>
     </section>
 
     <footer class="footer">
-        <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem;">
-            <a href="#" target="_blank" class="btn-custom" style="padding: 0.5rem 1.5rem; font-size: 0.9rem; width: auto;">LinkedIn</a>
-            <a href="https://github.com/selvaggi1996-source" target="_blank" class="btn-custom" style="padding: 0.5rem 1.5rem; font-size: 0.9rem; width: auto;">GitHub</a>
+        <div class="d-flex justify-content-center gap-3 mb-4">
+            <a href="https://www.linkedin.com/in/vincenzo-selvaggi/" class="btn-custom">LinkedIn</a>
+            <a href="https://github.com/selvaggi1996-source" class="btn-custom">GitHub</a>
         </div>
         <p>© 2026 Vincenzo Selvaggi. Tutti i diritti riservati.</p>
     </footer>
