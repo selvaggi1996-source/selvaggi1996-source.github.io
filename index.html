@@ -5,17 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincenzo Selvaggi - Visual & UI/UX Designer</title>
     
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
     <link rel="icon" href="favicon.png">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Vincenzo Selvaggi - Portfolio">
-    <meta property="og:description" content="Visual & UI/UX Designer Freelance Portfolio.">
-    <meta property="og:type" content="website">
 
     <style>
         :root {
@@ -51,7 +43,18 @@
         .nav-links-custom a:hover { color: var(--primary); }
 
         .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 5% 0; background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.08) 0%, rgba(11, 14, 20, 1) 60%); }
-        .hero h1 { font-size: 4.5rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 5rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin-bottom: 1.5rem; }
+        
+        /* PARTE MIGLIORATA PER LA LEGGIBILITA' */
+        .hero p {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            font-weight: 300;
+        }
+
         .btn-custom { padding: 1rem 2.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); border-radius: 30px; font-weight: 600; text-transform: uppercase; transition: all 0.3s; display: inline-block; }
         .btn-custom:hover { background: var(--primary); color: var(--bg-main); box-shadow: 0 0 30px rgba(0, 240, 255, 0.5); }
 
@@ -79,7 +82,7 @@
 
     <header class="hero">
         <h1 class="gradient-text">Progetto esperienze digitali sorprendenti.</h1>
-        <p class="text-muted fs-5">Sono Vincenzo Selvaggi, Visual & UI/UX Designer freelance. Trasformo idee complesse in interfacce moderne.</p>
+        <p>Sono Vincenzo Selvaggi, Visual & UI/UX Designer freelance. Trasformo idee complesse in interfacce moderne, chiare e d'impatto.</p>
         <a href="#experience" class="btn-custom">Scopri di più</a>
     </header>
 
@@ -126,7 +129,7 @@
 
     <footer class="footer">
         <div class="d-flex justify-content-center gap-3 mb-4">
-            <a href="https://www.linkedin.com/in/vincenzo-selvaggi/" class="btn-custom">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/vincenzo-selvaggi" class="btn-custom">LinkedIn</a>
             <a href="https://github.com/selvaggi1996-source" class="btn-custom">GitHub</a>
         </div>
         <p>© 2026 Vincenzo Selvaggi. Tutti i diritti riservati.</p>
