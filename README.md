@@ -1,10 +1,12 @@
 # selvaggi1996-source.github.io
-# Portfolio Personale - Vincenzo Selvaggi 
+# Benvenuti nel mio spazio digitale!
 
-Ciao! Mi chiamo Vincenzo e questo è il mio portfolio online.
+Ciao, sono Vincenzo! Questo è il mio portfolio personale, nato per raccogliere e raccontare il mio percorso di studi e le mie passioni.
 
-Il sito è suddiviso in una pagina principale (`index.html`) con alcune informazioni su di me, le mie esperienze formative e lavorative, i miei certificati e una pagina contatti (`contatti.html`) con un form per inviarmi un messaggio.
+Il sito è strutturato in questo modo:
+*   **Home (`index.html`)**: qui trovi un po' di info su di me, quello che ho fatto finora e i certificati che ho ottenuto.
+*   **CV (`cv.html`)**: la sezione dove ho riassunto le mie esperienze lavorative e la mia formazione.
+*   **Contatti (`contatti.html`)**: se vuoi scrivermi o collaborare, c'è un form dedicato che arriva dritto nella mia mail.
 
-Nella cartella `assets` ho inserito le immagini utilizzate e il file CSS.
+Ho tenuto tutto il necessario nella cartella `assets`, dove ho ordinato le immagini e il mio foglio di stile personalizzato. Ho preferito lavorare su un layout pulito e d'impatto, curando la struttura in HTML e il design in CSS per testare quanto ho imparato durante il Master in UX/UI Design di Start2Impact University.
 
-Ho creato il mio portfolio in occasione del progetto richiesto per il superamento del corso di UX/UI Design e Sviluppo di Start2Impact University.
