@@ -174,3 +174,13 @@ a {
         padding-top: 70px; 
     }
 }
+
+
+.logo {
+    font-weight: 700 !important;
+}
+
+.navbar-custom .nav-links-custom a, 
+.navbar .nav-link {
+    font-weight: 600 !important;
+}
