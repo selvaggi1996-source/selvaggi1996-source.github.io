@@ -1,4 +1,3 @@
-/* Variabili per i colori del sito */
 :root {
     --bg-main: #0B0E14;
     --bg-card: rgba(255, 255, 255, 0.03);
@@ -8,7 +7,6 @@
     --text-muted: #94A3B8;
 }
 
-/* Reset base della pagina */
 * { 
     box-sizing: border-box; 
     margin: 0; 
@@ -30,7 +28,6 @@ a {
     text-decoration: none; 
 }
 
-/* Effetto sfumato per il testo */
 .gradient-text {
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
@@ -38,7 +35,6 @@ a {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-/* Stile della barra di navigazione in alto */
 .navbar-custom {
     display: flex; 
     justify-content: space-between; 
@@ -76,7 +72,6 @@ a {
     color: var(--primary); 
 }
 
-/* Sezione Hero iniziale */
 .hero { 
     min-height: 80vh; 
     display: flex; 
@@ -104,7 +99,6 @@ a {
     font-weight: 300; 
 }
 
-/* Bottoni personalizzati */
 .btn-custom { 
     padding: 1rem 2.5rem; 
     background: transparent; 
@@ -123,7 +117,6 @@ a {
     box-shadow: 0 0 30px rgba(0, 240, 255, 0.5); 
 }
 
-/* Struttura base delle sezioni e griglia carte */
 .section { 
     padding: 6rem 5%; 
 }
@@ -142,7 +135,6 @@ a {
     gap: 2rem; 
 }
 
-/* Stile delle singole carte */
 .card-custom { 
     background: var(--bg-card); 
     border: 1px solid rgba(255,255,255,0.05); 
@@ -171,7 +163,6 @@ a {
     border: 1px solid rgba(255,255,255,0.1); 
 }
 
-/* Footer del sito */
 .footer { 
     text-align: center; 
     padding: 3rem; 
