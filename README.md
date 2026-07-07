@@ -1,5 +1,5 @@
 # selvaggi1996-source.github.io
-# Portfolio Personale - Vincenzo Selvaggi 🚀
+# Portfolio Personale - Vincenzo Selvaggi 
 
 Ciao! Mi chiamo Vincenzo e questo è il mio portfolio online.
 
