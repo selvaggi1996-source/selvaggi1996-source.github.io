@@ -1,3 +1,4 @@
+/* Variabili per i colori del sito */
 :root {
     --bg-main: #0B0E14;
     --bg-card: rgba(255, 255, 255, 0.03);
@@ -7,11 +8,29 @@
     --text-muted: #94A3B8;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Outfit', sans-serif; background-color: var(--bg-main); color: var(--text-light); overflow-x: hidden; }
-a { text-decoration: none; }
+/* Reset base della pagina */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
 
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    font-family: 'Outfit', sans-serif; 
+    background-color: var(--bg-main); 
+    color: var(--text-light); 
+    overflow-x: hidden; 
+}
+
+a { 
+    text-decoration: none; 
+}
+
+/* Effetto sfumato per il testo */
 .gradient-text {
     background: linear-gradient(90deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
@@ -19,29 +38,142 @@ a { text-decoration: none; }
     font-family: 'Space Grotesk', sans-serif;
 }
 
+/* Stile della barra di navigazione in alto */
 .navbar-custom {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.5rem 5%; border-bottom: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px); position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(11, 14, 20, 0.8);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1.5rem 5%; 
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px); 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    background: rgba(11, 14, 20, 0.8);
 }
 
-.logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--text-light); }
-.nav-links-custom { list-style: none; display: flex; gap: 2rem; margin: 0; }
-.nav-links-custom a { color: var(--text-light); transition: color 0.3s; }
-.nav-links-custom a:hover { color: var(--primary); }
+.logo { 
+    font-family: 'Space Grotesk', sans-serif; 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: var(--text-light); 
+}
 
-.hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 5% 0; background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.08) 0%, rgba(11, 14, 20, 1) 60%); }
-.hero h1 { font-size: 5rem; font-family: 'Space Grotesk', sans-serif; font-weight: 700; margin-bottom: 1.5rem; }
-.hero p { font-size: 1.3rem; color: #cbd5e1; max-width: 700px; margin-bottom: 2.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); font-weight: 300; }
+.nav-links-custom { 
+    list-style: none; 
+    display: flex; 
+    gap: 2rem; 
+    margin: 0; 
+}
 
-.btn-custom { padding: 1rem 2.5rem; background: transparent; color: var(--primary); border: 2px solid var(--primary); border-radius: 30px; font-weight: 600; text-transform: uppercase; transition: all 0.3s; display: inline-block; }
-.btn-custom:hover { background: var(--primary); color: var(--bg-main); box-shadow: 0 0 30px rgba(0, 240, 255, 0.5); }
+.nav-links-custom a { 
+    color: var(--text-light); 
+    transition: color 0.3s; 
+}
 
-.section { padding: 6rem 5%; }
-.section-title { font-family: 'Space Grotesk', sans-serif; font-size: 3rem; margin-bottom: 3.5rem; text-align: center; font-weight: 700; }
-.grid-custom { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.card-custom { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 20px; transition: transform 0.3s; height: 100%; }
-.card-custom:hover { transform: translateY(-10px); border-color: var(--primary); }
-.card-custom h3 { font-family: 'Space Grotesk', sans-serif; color: var(--primary); font-weight: 700; margin-bottom: 1rem; }
-.project-img { width: 100%; border-radius: 10px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.1); }
-.footer { text-align: center; padding: 3rem; border-top: 1px solid rgba(255,255,255,0.05); }
+.nav-links-custom a:hover { 
+    color: var(--primary); 
+}
+
+/* Sezione Hero iniziale */
+.hero { 
+    min-height: 80vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 120px 5% 0; 
+    background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.08) 0%, rgba(11, 14, 20, 1) 60%); 
+}
+
+.hero h1 { 
+    font-size: 5rem; 
+    font-family: 'Space Grotesk', sans-serif; 
+    font-weight: 700; 
+    margin-bottom: 1.5rem; 
+}
+
+.hero p { 
+    font-size: 1.3rem; 
+    color: #cbd5e1; 
+    max-width: 700px; 
+    margin-bottom: 2.5rem; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+    font-weight: 300; 
+}
+
+/* Bottoni personalizzati */
+.btn-custom { 
+    padding: 1rem 2.5rem; 
+    background: transparent; 
+    color: var(--primary); 
+    border: 2px solid var(--primary); 
+    border-radius: 30px; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    transition: all 0.3s; 
+    display: inline-block; 
+}
+
+.btn-custom:hover { 
+    background: var(--primary); 
+    color: var(--bg-main); 
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.5); 
+}
+
+/* Struttura base delle sezioni e griglia carte */
+.section { 
+    padding: 6rem 5%; 
+}
+
+.section-title { 
+    font-family: 'Space Grotesk', sans-serif; 
+    font-size: 3rem; 
+    margin-bottom: 3.5rem; 
+    text-align: center; 
+    font-weight: 700; 
+}
+
+.grid-custom { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+}
+
+/* Stile delle singole carte */
+.card-custom { 
+    background: var(--bg-card); 
+    border: 1px solid rgba(255,255,255,0.05); 
+    padding: 2.5rem; 
+    border-radius: 20px; 
+    transition: transform 0.3s; 
+    height: 100%; 
+}
+
+.card-custom:hover { 
+    transform: translateY(-10px); 
+    border-color: var(--primary); 
+}
+
+.card-custom h3 { 
+    font-family: 'Space Grotesk', sans-serif; 
+    color: var(--primary); 
+    font-weight: 700; 
+    margin-bottom: 1rem; 
+}
+
+.project-img { 
+    width: 100%; 
+    border-radius: 10px; 
+    margin-bottom: 1rem; 
+    border: 1px solid rgba(255,255,255,0.1); 
+}
+
+/* Footer del sito */
+.footer { 
+    text-align: center; 
+    padding: 3rem; 
+    border-top: 1px solid rgba(255,255,255,0.05); 
+}
