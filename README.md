@@ -1,5 +1,5 @@
 # selvaggi1996-source.github.io
-# Benvenuti nel mio spazio digitale!
+# Benvenuti!
 
 Ciao, sono Vincenzo! Questo è il mio portfolio personale, nato per raccogliere e raccontare il mio percorso di studi e le mie passioni.
 
