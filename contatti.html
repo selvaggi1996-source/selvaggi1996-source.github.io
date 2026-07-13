@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti - Vincenzo Selvaggi</title>
     
+    <meta name="description" content="Scrivimi per collaborazioni o progetti. Mettiamoci in contatto!"/>
     
     <meta property="og:title" content="Contattami - Vincenzo Selvaggi"/>
     <meta property="og:description" content="Scrivimi per collaborazioni o progetti!"/>
-    <meta property="og:image" content="assets/favicon.png"/>
+    <meta property="og:image" content="https://selvaggi1996-source.github.io/assets/favicon.png"/>
     <meta property="og:url" content="https://selvaggi1996-source.github.io/contatti.html"/>
     <meta property="og:type" content="website"/>
     
@@ -39,40 +40,40 @@
         </div>
     </nav>
 
-    <div class="sezioni" style="margin-top: 150px; padding: 2rem 5%; text-align: center; min-height: 60vh;">
-        <div class="form" id="formid" style="background: var(--bg-card); border: 1px solid rgba(255,255,255,0.05); padding: 3rem; border-radius: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <main class="main-spacing">
+        <div class="form-container" id="formid">
             <div class="section-title">
-                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary); font-family: 'Space Grotesk', sans-serif;">Contattami compilando il form</h2>
+                <h1 class="form-title">Contattami compilando il form</h1>
             </div>
 
-            <form id="contactform" style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left;">
+            <form id="contactform" class="custom-form">
                 <input type="hidden" name="contact_number">
 
-                <label class="formelement" for="namespace" style="color: var(--text-light); font-weight: 600;">Nome</label>
-                <input required class="formelement" id="namespace" type="text" name="user_name" style="padding: 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; font-family: 'Outfit', sans-serif;">
+                <label class="custom-label" for="namespace">Nome</label>
+                <input required class="custom-input" id="namespace" type="text" name="user_name">
 
-                <label class="formelement" for="emailspace" style="color: var(--text-light); font-weight: 600;">Email</label>
-                <input required class="formelement" id="emailspace" type="email" name="user_email" style="padding: 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; font-family: 'Outfit', sans-serif;">
+                <label class="custom-label" for="emailspace">Email</label>
+                <input required class="custom-input" id="emailspace" type="email" name="user_email">
 
-                <label class="formelement" for="messagespace" style="color: var(--text-light); font-weight: 600;">Messaggio</label>
-                <textarea required class="formelement" id="messagespace" name="message" rows="5" style="padding: 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: white; resize: vertical; font-family: 'Outfit', sans-serif;"></textarea>
+                <label class="custom-label" for="messagespace">Messaggio</label>
+                <textarea required class="custom-input custom-textarea" id="messagespace" name="message" rows="5"></textarea>
 
-                <input class="formelement btn-custom" id="sendbutton" type="submit" value="Invia" style="cursor: pointer; margin-top: 1rem; width: 100%;">
+                <input class="btn-custom submit-btn" id="sendbutton" type="submit" value="Invia">
             </form>
 
-            <div id="grazie" style="display: none; color: var(--primary); margin-top: 1.5rem; font-weight: 700; font-size: 1.2rem;">
+            <div id="grazie" class="success-msg">
                 Grazie! Il tuo messaggio è stato inviato.
             </div>
         </div>
-    </div>
+    </main>
 
-    <div class="footer">
+    <footer class="footer">
         <div class="d-flex justify-content-center gap-3 mb-4">
             <div class="social-btn"><a href="https://www.linkedin.com/in/vincenzo-selvaggi" target="_blank" class="btn-custom">LinkedIn</a></div>
             <div class="social-btn"><a href="https://github.com/selvaggi1996-source" target="_blank" class="btn-custom">GitHub</a></div>
         </div>
         <div class="footer-text"><p>© 2026 Vincenzo Selvaggi. Tutti i diritti riservati.</p></div>
-    </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
